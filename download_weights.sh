@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Download the MiniMax-H3 base weights (~123 GB) and the Qwen3-VL processor files (~11 MB) into weights/.
-# The AnyGameRenderer LoRA (weights/anygamerenderer_v10ep3_lora.safetensors, 2.4 GB) is distributed separately; place it in weights/.
+# The AnyGameRenderer LoRA (weights/anygamerenderer_lora.safetensors, 2.4 GB) is distributed separately; place it in weights/.
 #
 # Read and accept the MiniMax-H3 Community License first:
 #   https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE

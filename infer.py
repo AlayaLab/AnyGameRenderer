@@ -4,7 +4,7 @@ Runs MiniMax-H3 ref2va with the AnyGameRenderer LoRA merged in. Weights are load
 JSONL is then generated in turn (text encoder first for all jobs, then transformer + VAEs stay resident).
 
 Usage:
-    python infer.py jobs.jsonl [--weights weights] [--lora weights/anygamerenderer_v10ep3_lora.safetensors]
+    python infer.py jobs.jsonl [--weights weights] [--lora weights/anygamerenderer_lora.safetensors]
                                [--steps 20] [--seed 42] [--blocks_to_swap 40] [--width 1344 --height 768]
 
 jobs.jsonl, one JSON object per line:
@@ -96,7 +96,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("jobs")
     ap.add_argument("--weights", default=str(HERE / "weights"), help="directory with diffusion_models/ text_encoders/ vae/ processors/ (see download_weights.sh)")
-    ap.add_argument("--lora", default=str(HERE / "weights/anygamerenderer_v10ep3_lora.safetensors"), help="AnyGameRenderer LoRA; pass '' for the base model only")
+    ap.add_argument("--lora", default=str(HERE / "weights/anygamerenderer_lora.safetensors"), help="AnyGameRenderer LoRA; pass '' for the base model only")
     ap.add_argument("--lora_multiplier", type=float, default=1.0)
     ap.add_argument("--processor", default=None, help="Qwen3-VL processor dir or HF id (default: <weights>/processors/Qwen3-VL-32B-Instruct, else Qwen/Qwen3-VL-32B-Instruct)")
     ap.add_argument("--steps", type=int, default=20)
