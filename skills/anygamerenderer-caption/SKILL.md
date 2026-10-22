@@ -20,7 +20,7 @@ describes the setting and art style precisely. You never write the caption by ha
    lower right, third person, top down, chase cam).
 2. **Ask or infer what each color is.** The user usually knows ("blue = enemy soldiers, green = my rifle"). If not,
    infer from behavior: a large proxy fixed at the lower right of a first-person view is the player's weapon; one proxy
-   the camera follows is the player; a group of identical proxies is enemies, allies, cars or athletes.
+   the camera follows is the player; a group of identical proxies is enemies, allies, cars, or athletes.
 3. **Write `spec.json`** (fields below), run `python make_caption.py clip/spec.json -o clip/caption.txt`, and read the
    caption once to check nothing contradicts the video.
 4. **Render**: add a line to `jobs.jsonl` and run `CUDA_VISIBLE_DEVICES=0 python infer.py jobs.jsonl` (≈ 17 min per 5 s
@@ -47,7 +47,7 @@ describes the setting and art style precisely. You never write the caption by ha
 | `shape` | the proxy shape used in this clip: `box`, `wire` (wireframe box), `cylinder` or `sphere` (ellipsoid). One shape per clip. |
 | `setting` | one concrete sentence of what the gray geometry becomes: ground, walls / buildings, props, sky, and lighting. Name materials and colors; it is the only description of the environment the model gets. |
 | `subjects[].color` | the proxy color *as it appears in the video*, from: red, orange, yellow, yellow-green, green, cyan, blue, purple, magenta. Use the script's names; a color that is not in the video binds nothing. |
-| `subjects[].desc` | who/what the proxy is, concretely: role, outfit or body, colors, what it carries. Start with the role ("the player's own weapon seen in first person: …", "a rival kart …"). |
+| `subjects[].desc` | who/what the proxy is, concretely: role, outfit, or body, colors, what it carries. Start with the role ("the player's own weapon seen in first person: …", "a rival kart …"). |
 | `subjects[].many` | `true` when every proxy of that color is one instance of the same subject (crowds, enemies, rival cars, athletes); `false` when exactly one proxy is this subject (the player, the first-person weapon). Wrong `many` is the most common cause of missing or duplicated entities. |
 | `subjects[].motion` | how the subject moves on top of the proxy's path: `moving as recorded` (default), `driving exactly along its recorded path` (vehicles), `locked to the viewpoint, swaying gently with each step` (first-person weapon). Add animation hints here ("running with full strides, arms pumping") rather than in `desc`. |
 | `sound` | a short soundscape line; keep it consistent with the action (no gunfire sounds in a racing game). |
@@ -58,11 +58,11 @@ describes the setting and art style precisely. You never write the caption by ha
 
 - **One subject per color, every color bound.** Each distinct proxy color in the video needs exactly one subject
   entry; unbound proxies are rendered as whatever the model guesses, or stay as blocks.
-- **Describe only what is in the video.** Do not add characters, vehicles or effects that have no proxy; the model will
+- **Describe only what is in the video.** Do not add characters, vehicles, or effects that have no proxy; the model will
   draw them and they will not track anything. Effects a game really has (muzzle flash, boost flames, ball in flight)
   may be mentioned in `desc`/`motion`, but only if that event actually happens in the clip.
 - **Positive statements only.** The model has no negative guidance: "no HUD", "no gunfire", "no text" tend to *produce*
-  a HUD, gunfire or text. Say what is there, not what is not. For ball sports write "a clean live-action-quality sports
+  a HUD, gunfire, or text. Say what is there, not what is not. For ball sports write "a clean live-action-quality sports
   broadcast" instead of "no HUD markers".
 - **Setting must match the geometry.** A top-down blockout of a road grid should be described as a road grid, not a
   forest; the model keeps the layout and will fight a mismatched setting with drifting cameras.

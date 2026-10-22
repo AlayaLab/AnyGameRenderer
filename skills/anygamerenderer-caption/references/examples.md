@@ -27,7 +27,7 @@ group); describing both uniforms with distinct colors keeps the sides apart.
 ```json
 {
   "shape": "wire",
-  "setting": "a container port seen from high above: a long pale-gray concrete dock road with white lane arrows and pedestrian stripes, lined on both sides by stacked shipping containers in teal, yellow and gray, under a hazy white sky",
+  "setting": "a container port seen from high above: a long pale-gray concrete dock road with white lane arrows and pedestrian stripes, lined on both sides by stacked shipping containers in teal, yellow, and gray, under a hazy white sky",
   "subjects": [
     {"color": "cyan", "desc": "a blue-uniformed soldier with a dark helmet and rifle, jogging in tight formation with identical squadmates", "many": true, "motion": "moving as recorded"},
     {"color": "blue", "desc": "a red-uniformed enemy infantryman with a dark helmet and rifle, standing or charging in ranks", "many": true, "motion": "moving as recorded"}
@@ -44,7 +44,7 @@ which is which by camera behavior.
 ```json
 {
   "shape": "box",
-  "setting": "a sunlit asphalt race circuit: smooth dark tarmac with white edge lines and red-white curbs, tire barriers, grandstands and advertising boards, green verges and distant hills under a clear sky",
+  "setting": "a sunlit asphalt race circuit: smooth dark tarmac with white edge lines and red-white curbs, tire barriers, grandstands, and advertising boards, green verges and distant hills under a clear sky",
   "subjects": [
     {"color": "orange", "desc": "a sleek open-wheel racing kart with a low body, exposed engine and a helmeted driver; the one the camera follows is the player's kart, the others are rival karts in different liveries", "many": true, "motion": "driving exactly along its recorded path"}
   ],
@@ -77,12 +77,12 @@ sentence. Sentences copied from `styles.md`.
 ```json
 {
   "shape": "cylinder",
-  "setting": "a futuristic indoor training arena: smooth white and pale-gray curved walls, dark teal panels, red floor stripes, raised platforms and elevated walkways under a vaulted dark ceiling, with every structure, floor and railing assembled from LEGO bricks, plates and tiles with visible studs",
+  "setting": "a futuristic indoor training arena: smooth white and pale-gray curved walls, dark teal panels, red floor stripes, raised platforms and elevated walkways under a vaulted dark ceiling, with every structure, floor, and railing assembled from LEGO bricks, plates, and tiles with visible studs",
   "subjects": [
     {"color": "green", "desc": "the player's own weapon seen in first person, rebuilt as a LEGO brick blaster: a chunky gray plastic brick gun held by yellow claw hands at the lower right", "many": false, "motion": "locked to the viewpoint, swaying gently with each step"},
     {"color": "blue", "desc": "a rival cadet in a dark-gray combat suit with red trim, rebuilt as a LEGO minifigure: cylindrical yellow head with a printed face, claw-shaped hands, blocky torso with the suit printed on it, stiff plastic legs, glossy ABS plastic", "many": true, "motion": "moving as recorded"}
   ],
   "sound": "plastic clicks, footsteps on hard flooring, toy-like rifle sounds",
-  "style": "a LEGO movie: the entire world is built from real LEGO bricks with visible studs, seams and the glossy ABS plastic sheen, lit like a studio-shot toy diorama (The LEGO Movie look), slight stop-motion feel, bright primary colors"
+  "style": "a LEGO movie: the entire world is built from real LEGO bricks with visible studs, seams, and the glossy ABS plastic sheen, lit like a studio-shot toy diorama (The LEGO Movie look), slight stop-motion feel, bright primary colors"
 }
 ```
