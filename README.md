@@ -7,7 +7,7 @@
   <a href="https://huggingface.co/datasets/AlayaLab/AnyGameRenderer-data"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Dataset-ff9d00" alt="Dataset"></a>
 </p>
 
-<!-- TODO before release: replace the four badge links above (project page URL, arXiv id, HF model repo, HF dataset repo). -->
+<!-- TODO before release: replace the project page URL, arXiv id and HF dataset repo in the badges above. -->
 
 AnyGameRenderer takes a crude gameplay recording (the "programmer art" agents produce) and a text prompt, and outputs the same gameplay re-rendered in the prompted style, frame-aligned with the input.
 
@@ -40,7 +40,7 @@ AnyGameRenderer takes a crude gameplay recording (the "programmer art" agents pr
 git clone https://github.com/MickeyLLG/AnyGameRenderer_infer.git && cd AnyGameRenderer_infer
 bash setup_env.sh && conda activate agr                          # Python 3.10, torch 2.9.1+cu128, transformers 4.57.6 …
 bash download_weights.sh                                         # MiniMax-H3 base weights (~123 GB) -> weights/
-cp /path/to/anygamerenderer_lora.safetensors weights/     # the LoRA (2.4 GB) is distributed separately
+huggingface-cli download AlayaLab/AnyGameRenderer anygamerenderer_lora.safetensors --local-dir weights   # the LoRA (2.4 GB)
 bash run_example.sh                                              # examples/*/primitive.mp4 -> examples/out/*.mp4 (~17 min per clip)
 ```
 
