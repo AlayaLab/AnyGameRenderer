@@ -2,10 +2,10 @@
 
 <div align="center">
 
-[![Project Page](https://img.shields.io/badge/%F0%9F%8C%90_Project-Page-2d6cdf?style=for-the-badge)](https://mickeyllg.github.io/AnyGameRenderer)
-[![Technical Report](https://img.shields.io/badge/arXiv-Technical_Report-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/XXXX.XXXXX)
-[![Model](https://img.shields.io/badge/%F0%9F%A4%97_Hugging_Face-Model-ffcc00?style=for-the-badge)](https://huggingface.co/MickeyLLG/AnyGameRenderer)
-[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97_Hugging_Face-Dataset-ff9d00?style=for-the-badge)](https://huggingface.co/datasets/MickeyLLG/AnyGameRenderer-Data)
+[![Project Page](https://img.shields.io/badge/%F0%9F%8C%90-Project_Page-2d6cdf)](https://mickeyllg.github.io/AnyGameRenderer)&nbsp;
+[![Technical Report](https://img.shields.io/badge/arXiv-Report-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/XXXX.XXXXX)&nbsp;
+[![Model](https://img.shields.io/badge/%F0%9F%A4%97-Model-ffcc00)](https://huggingface.co/MickeyLLG/AnyGameRenderer)&nbsp;
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97-Dataset-ff9d00)](https://huggingface.co/datasets/MickeyLLG/AnyGameRenderer-Data)
 
 </div>
 
