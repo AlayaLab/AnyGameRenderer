@@ -12,7 +12,7 @@ AnyGameRenderer takes a crude gameplay recording (the "programmer art" agents pr
 
 ## Gallery
 
-Rendered by AnyGameRenderer from crude blockout recordings — one model, every genre below. Clips are 5.2 s at 1344×768; the GIFs are downscaled.
+Crude input on the left · AnyGameRenderer on the right, playing in sync — one model, every genre below. Clips are 5.2 s at 1344×768; the GIFs are downscaled.
 
 | | |
 |:--:|:--:|
@@ -81,31 +81,11 @@ Describe what each proxy is and the setting concretely, set `"many": true` for c
 | Time | ≈ 17 min per 124-frame clip at 20 steps on H100-class, plus ≈ 6 min of weight loading per process. |
 | Software | Linux, CUDA 12.8 driver, Python 3.10, packages pinned in `requirements.txt`. |
 
-## Repository layout
-
-```
-infer.py            jobs.jsonl -> mp4s; loads the weights once and loops over the jobs
-make_caption.py     spec.json -> caption.txt in the exact training format
-h3_media.py         input video decoding (24 fps resample, 17n+5 frames, model canvas)
-third_party/        25-file subset of musubi-tuner (MiniMax-H3 model, VAEs, text encoder, LoRA merge, block swap) — see NOTICE.md
-weights/            base weights (download_weights.sh) + the LoRA (distributed separately)
-examples/           three crude recordings with spec.json, caption.txt and the original game footage
-assets/gallery/     the GIFs above
-```
-
 ## Notes
 
 - Resolution and length are fixed to what the LoRA was trained on (1344×768, 124 frames); longer clips up to 345 frames run but were not trained for.
 - Generation is deterministic for a given seed, and different seeds change appearance details, not layout.
 - `third_party/musubi_tuner` is [kohya-ss/musubi-tuner](https://github.com/kohya-ss/musubi-tuner) at commit `c4dc6b8` (its MiniMax-H3 branch); `infer.py` always imports this copy, so an installed musubi-tuner is neither needed nor used.
-
-## Acknowledgements
-
-Built on [MiniMax-H3](https://huggingface.co/MiniMaxAI/MiniMax-H3) (Ref2VA backbone and VAEs, repacked by [Comfy-Org](https://huggingface.co/Comfy-Org/MiniMax-H3)) and [musubi-tuner](https://github.com/kohya-ss/musubi-tuner) (model code and LoRA training).
-
-## License
-
-Code: see `LICENSE` (vendored `third_party/musubi_tuner` is Apache-2.0, see `third_party/NOTICE.md`); base weights and the LoRA derived from them: [MiniMax-H3 Community License](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE).
 
 ## Citation
 
