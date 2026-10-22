@@ -60,7 +60,7 @@ Options: `--steps 20` `--seed 42` `--blocks_to_swap 40` `--lora ''` (base model)
 
 **Crude recording** — an mp4 at 24 fps, 2–15 s (1344×768 recommended; length is snapped down to `17n+5` frames) of pale-gray geometry with one flat, saturated proxy color per character / weapon / vehicle class (red, orange, yellow, yellow-green, green, cyan, blue, purple, magenta), and no HUD, text, or effects.
 
-**Caption** — write a short `spec.json` and `make_caption.py` expands it into the six-section layout the model was trained on (`--template` prints a full example); the easiest way is to give [`skills/anygamerenderer-caption/SKILL.md`](skills/anygamerenderer-caption/SKILL.md) to your coding agent (e.g. copy the folder into `.claude/skills/`) and ask it to write the spec for your clip — it inspects the proxy colors, picks the right fields and knows 45 ready-made art styles:
+**Caption** — the easiest way is to give [`skills/anygamerenderer-caption/SKILL.md`](skills/anygamerenderer-caption/SKILL.md) to your coding agent and ask it to write the spec and caption for your clip — it inspects the proxy colors, picks the right fields and knows 45 ready-made art styles:
 
 ```json
 {
