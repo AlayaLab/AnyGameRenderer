@@ -1,4 +1,15 @@
-# AnyGameRenderer: A Video-to-Video Generative Renderer for Games
+# AnyGameRenderer: One Generative Renderer from Blockout to AAA for Any Vibe-Coded Games
+
+<div align="center">
+
+[![Project Page](https://img.shields.io/badge/%F0%9F%8C%90_Project-Page-2d6cdf?style=for-the-badge)](https://mickeyllg.github.io/AnyGameRenderer)
+[![Technical Report](https://img.shields.io/badge/arXiv-Technical_Report-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/XXXX.XXXXX)
+[![Model](https://img.shields.io/badge/%F0%9F%A4%97_Hugging_Face-Model-ffcc00?style=for-the-badge)](https://huggingface.co/MickeyLLG/AnyGameRenderer)
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97_Hugging_Face-Dataset-ff9d00?style=for-the-badge)](https://huggingface.co/datasets/MickeyLLG/AnyGameRenderer-Data)
+
+</div>
+
+<!-- TODO before release: replace the four badge links above (project page URL, arXiv id, HF model repo, HF dataset repo). -->
 
 AnyGameRenderer takes a crude gameplay recording (the "programmer art" agents produce: gray boxes and colored cylinders on flat ground) and a text prompt, and outputs the same gameplay re-rendered in the prompted style, frame-aligned with the input — a LoRA on [MiniMax-H3](https://huggingface.co/MiniMaxAI/MiniMax-H3) Ref2VA; this repo is the inference package.
 
@@ -91,7 +102,7 @@ Describe what each proxy is and the setting concretely, set `"many": true` for c
 
 ```bibtex
 @misc{anygamerenderer2026,
-  title  = {AnyGameRenderer: A Video-to-Video Generative Renderer for Games},
+  title  = {AnyGameRenderer: One Generative Renderer from Blockout to AAA for Any Vibe-Coded Games},
   author = {TODO},
   year   = {2026},
   note   = {TODO: paper / project page}
