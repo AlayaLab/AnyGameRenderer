@@ -40,7 +40,7 @@ AnyGameRenderer takes a crude gameplay recording (the "programmer art" agents pr
 git clone https://github.com/MickeyLLG/AnyGameRenderer_infer.git && cd AnyGameRenderer_infer
 bash setup_env.sh && conda activate agr                          # Python 3.10, torch 2.9.1+cu128, transformers 4.57.6 …
 bash download_weights.sh                                         # MiniMax-H3 base weights (~123 GB) -> weights/
-cp /path/to/anygamerenderer_v10ep3_lora.safetensors weights/     # the LoRA (2.4 GB) is distributed separately
+cp /path/to/anygamerenderer_lora.safetensors weights/     # the LoRA (2.4 GB) is distributed separately
 bash run_example.sh                                              # examples/*/primitive.mp4 -> examples/out/*.mp4 (~17 min per clip)
 ```
 
