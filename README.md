@@ -1,29 +1,27 @@
 # AnyGameRenderer: One Generative Renderer from Blockout to AAA for Any Vibe-Coded Games
 
-<div align="center">
 
-[![Project Page](https://img.shields.io/badge/%F0%9F%8C%90-Project_Page-2d6cdf)](https://mickeyllg.github.io/AnyGameRenderer)&nbsp;
-[![Technical Report](https://img.shields.io/badge/arXiv-Report-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/XXXX.XXXXX)&nbsp;
-[![Model](https://img.shields.io/badge/%F0%9F%A4%97-Model-ffcc00)](https://huggingface.co/MickeyLLG/AnyGameRenderer)&nbsp;
-[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97-Dataset-ff9d00)](https://huggingface.co/datasets/MickeyLLG/AnyGameRenderer-Data)
 
-</div>
+![Project Page](https://img.shields.io/badge/%F0%9F%8C%90-Project_Page-2d6cdf) 
+![Technical Report](https://img.shields.io/badge/arXiv-Report-b31b1b?logo=arxiv&logoColor=white) 
+![Model](https://img.shields.io/badge/%F0%9F%A4%97-Model-ffcc00) 
+![Dataset](https://img.shields.io/badge/%F0%9F%A4%97-Dataset-ff9d00)
 
-<!-- TODO before release: replace the four badge links above (project page URL, arXiv id, HF model repo, HF dataset repo). -->
 
-AnyGameRenderer takes a crude gameplay recording (the "programmer art" agents produce: gray boxes and colored cylinders on flat ground) and a text prompt, and outputs the same gameplay re-rendered in the prompted style, frame-aligned with the input — a LoRA on [MiniMax-H3](https://huggingface.co/MiniMaxAI/MiniMax-H3) Ref2VA; this repo is the inference package.
+
+
+
+AnyGameRenderer takes a crude gameplay recording (the "programmer art" agents produce) and a text prompt, and outputs the same gameplay re-rendered in the prompted style, frame-aligned with the input.
 
 ## Highlights
 
-- 🎮 **Generalizes across genres:** one checkpoint renders tower defense, auto-battlers, top-down survivors, turn-based battles, kart racing, crowd runners, arena survival, co-op games and shooters.
+- 🎮 **Generalizes across genres:** one checkpoint renders tower defense, auto-battlers, top-down survivors, turn-based battles, kart racing, crowd runners, arena survival, co-op games, and shooters.
 - 🎯 **Keeps entity correspondence:** group counts stay correct, entities appear and disappear on the right frame, and small far-away entities are not lost.
 - 📹 **Its input is plain video:** gray blockouts, colored primitives, semantic maps, wireframes and coarse mockups all work, with no per-object labels or engine hooks.
 - 🎨 **Any prompted style:** photoreal AAA, LEGO, Ghibli, crayon, synthwave, samurai, candy land … with the characters re-imagined to match.
 - 📊 **Measured at the entity level:** on 59 held-out cases with 753 ground-truth entities, temporal match rises from 50.9 % to 62.9 % and position match from 57.1 % to 61.9 % over the zero-shot base, while the unrendered (4.1 → 2.9 %) and hallucination (52.1 → 46.0 %) rates fall.
 
-## Gallery
-
-Crude input on the left · AnyGameRenderer on the right, playing in sync — one model, every genre below. Clips are 5.2 s at 1344×768; the GIFs are downscaled.
+## Gallery: One model, every genre
 
 | | |
 |:--:|:--:|
@@ -79,8 +77,6 @@ Options: `--steps 20` `--seed 42` `--blocks_to_swap 40` `--lora ''` (base model)
   "sound": "hum of arena ventilation, footsteps on hard flooring, rifle fire echoing"
 }
 ```
-
-Describe what each proxy is and the setting concretely, set `"many": true` for classes with several proxies, put the art direction in the optional `"style"` (and the character re-imagining at the end of each `desc`), and write only positive statements (there is no negative guidance — "no HUD" tends to produce a HUD).
 
 ## Requirements
 
