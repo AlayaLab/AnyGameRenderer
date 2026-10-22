@@ -1,13 +1,13 @@
 # AnyGameRenderer: Entity-Consistent Generative Rendering Across Games and an Entity-Level Benchmark
 
 <p align="center">
-  <a href="https://mickeyllg.github.io/AnyGameRenderer"><img src="https://img.shields.io/badge/%F0%9F%8C%90-Project_Page-2d6cdf" alt="Project Page"></a>&nbsp;
+  <a href="https://alaya-lab.github.io/AnyGameRenderer/"><img src="https://img.shields.io/badge/%F0%9F%8C%90-Project_Page-2d6cdf" alt="Project Page"></a>&nbsp;
   <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-Report-b31b1b?logo=arxiv&logoColor=white" alt="Technical Report"></a>&nbsp;
   <a href="https://huggingface.co/AlayaLab/AnyGameRenderer"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Model-ffcc00" alt="Model"></a>&nbsp;
   <a href="https://huggingface.co/datasets/AlayaLab/AnyGameRenderer-data"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Dataset-ff9d00" alt="Dataset"></a>
 </p>
 
-<!-- TODO before release: replace the project page URL, arXiv id and HF dataset repo in the badges above. -->
+<!-- TODO before release: replace the arXiv id and HF dataset repo in the badges above. -->
 
 AnyGameRenderer takes a crude gameplay recording (the "programmer art" agents produce) and a text prompt, and outputs the same gameplay re-rendered in the prompted style, frame-aligned with the input.
 
