@@ -1,15 +1,13 @@
 # AnyGameRenderer: One Generative Renderer from Blockout to AAA for Any Vibe-Coded Games
 
+<p align="center">
+  <a href="https://mickeyllg.github.io/AnyGameRenderer"><img src="https://img.shields.io/badge/%F0%9F%8C%90-Project_Page-2d6cdf" alt="Project Page"></a>&nbsp;
+  <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-Report-b31b1b?logo=arxiv&logoColor=white" alt="Technical Report"></a>&nbsp;
+  <a href="https://huggingface.co/MickeyLLG/AnyGameRenderer"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Model-ffcc00" alt="Model"></a>&nbsp;
+  <a href="https://huggingface.co/datasets/MickeyLLG/AnyGameRenderer-Data"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Dataset-ff9d00" alt="Dataset"></a>
+</p>
 
-
-![Project Page](https://img.shields.io/badge/%F0%9F%8C%90-Project_Page-2d6cdf) 
-![Technical Report](https://img.shields.io/badge/arXiv-Report-b31b1b?logo=arxiv&logoColor=white) 
-![Model](https://img.shields.io/badge/%F0%9F%A4%97-Model-ffcc00) 
-![Dataset](https://img.shields.io/badge/%F0%9F%A4%97-Dataset-ff9d00)
-
-
-
-
+<!-- TODO before release: replace the four badge links above (project page URL, arXiv id, HF model repo, HF dataset repo). -->
 
 AnyGameRenderer takes a crude gameplay recording (the "programmer art" agents produce) and a text prompt, and outputs the same gameplay re-rendered in the prompted style, frame-aligned with the input.
 
@@ -60,9 +58,9 @@ Options: `--steps 20` `--seed 42` `--blocks_to_swap 40` `--lora ''` (base model)
 
 ## Inputs and captions
 
-**Crude recording** — an mp4 at 24 fps, 2–15 s (1344×768 recommended; length is snapped down to `17n+5` frames) of pale-gray geometry with one flat, saturated proxy colour per character / weapon / vehicle class (red, orange, yellow, yellow-green, green, cyan, blue, purple, magenta), and no HUD, text or effects.
+**Crude recording** — an mp4 at 24 fps, 2–15 s (1344×768 recommended; length is snapped down to `17n+5` frames) of pale-gray geometry with one flat, saturated proxy color per character / weapon / vehicle class (red, orange, yellow, yellow-green, green, cyan, blue, purple, magenta), and no HUD, text, or effects.
 
-**Caption** — write a short `spec.json` and `make_caption.py` expands it into the six-section layout the model was trained on (`--template` prints a full example); the easiest way is to give [`skills/anygamerenderer-caption/SKILL.md`](skills/anygamerenderer-caption/SKILL.md) to your coding agent (e.g. copy the folder into `.claude/skills/`) and ask it to write the spec for your clip — it inspects the proxy colours, picks the right fields and knows 45 ready-made art styles:
+**Caption** — write a short `spec.json` and `make_caption.py` expands it into the six-section layout the model was trained on (`--template` prints a full example); the easiest way is to give [`skills/anygamerenderer-caption/SKILL.md`](skills/anygamerenderer-caption/SKILL.md) to your coding agent (e.g. copy the folder into `.claude/skills/`) and ask it to write the spec for your clip — it inspects the proxy colors, picks the right fields and knows 45 ready-made art styles:
 
 ```json
 {
@@ -71,7 +69,7 @@ Options: `--steps 20` `--seed 42` `--blocks_to_swap 40` `--lora ''` (base model)
   "subjects": [
     {"color": "green", "desc": "the player's own weapon seen in first person: a futuristic assault rifle ...",
      "many": false, "motion": "locked to the viewpoint, swaying gently with each step"},
-    {"color": "blue", "desc": "a rival cadet in a dark-grey combat suit with a visored helmet, carrying a rifle",
+    {"color": "blue", "desc": "a rival cadet in a dark-gray combat suit with a visored helmet, carrying a rifle",
      "many": true, "motion": "moving as recorded"}
   ],
   "sound": "hum of arena ventilation, footsteps on hard flooring, rifle fire echoing"

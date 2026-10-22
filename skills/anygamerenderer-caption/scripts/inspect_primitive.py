@@ -1,4 +1,4 @@
-"""Inspect a crude (white-model) recording: which proxy colours it contains, roughly how many proxies of each, the clip
+"""Inspect a crude (white-model) recording: which proxy colors it contains, roughly how many proxies of each, the clip
 length / frame count AnyGameRenderer will generate, and a contact sheet of sampled frames to look at the proxy shape and camera.
 
 Usage: python inspect_primitive.py clip/primitive.mp4 [--sheet clip/primitive_sheet.jpg]
@@ -24,7 +24,7 @@ def main():
         cap.set(1, i); ok, f = cap.read()
         if not ok: continue
         frames.append((i, f)); hsv = cv2.cvtColor(f, cv2.COLOR_BGR2HSV)
-        mask = ((hsv[..., 1] > 100) & (hsv[..., 2] > 60)).astype(np.uint8)  # saturated = proxy; grey geometry is excluded
+        mask = ((hsv[..., 1] > 100) & (hsv[..., 2] > 60)).astype(np.uint8)  # saturated = proxy; gray geometry is excluded
         num, lab, stats, _ = cv2.connectedComponentsWithStats(mask, 8)
         for k in range(1, num):
             if stats[k, cv2.CC_STAT_AREA] < 25: continue
@@ -33,7 +33,7 @@ def main():
             counts.setdefault(name, []).append(1); areas.setdefault(name, []).append(area)
             if area > 0.03 * w * h and y + bh >= 0.95 * h and x + bw / 2 > 0.6 * w: pinned[name] = pinned.get(name, 0) + 1  # 大块、贴着下缘、偏右: 第一人称武器的特征
     if not counts:
-        print('no saturated proxy colours found — is this really a white-model video?')
+        print('no saturated proxy colors found — is this really a white-model video?')
     for name in sorted(counts, key=lambda c: -sum(areas[c])):
         per = len(counts[name]) / len(frames); mean_area = np.mean(areas[name]); big = max(areas[name])
         print(f'  {name:13s} ~{per:4.1f} blobs per sampled frame (touching proxies merge into one blob), mean area {mean_area:7.0f} px, largest {big:7.0f} px'

@@ -12,19 +12,19 @@ spec.json:
 {
   "shape": "cylinder",          # proxy shape used in the white model: box | wire | cylinder | sphere
   "setting": "a futuristic indoor training arena: smooth white curved walls, ...",   # one sentence, no trailing period
-  "subjects": [                 # one entry per proxy colour, in the order you want them numbered
+  "subjects": [                 # one entry per proxy color, in the order you want them numbered
     {"color": "green", "desc": "the player's own weapon seen in first person: a futuristic assault rifle ...",
      "many": false, "motion": "locked to the viewpoint, swaying gently with each step"},
-    {"color": "blue",  "desc": "a rival cadet in a dark-grey combat suit with a visored helmet, carrying a rifle",
+    {"color": "blue",  "desc": "a rival cadet in a dark-gray combat suit with a visored helmet, carrying a rifle",
      "many": true,  "motion": "moving as recorded"}
   ],
   "sound": "hum of arena ventilation, footsteps on hard flooring, rifle fire echoing",
   "style": null,                # optional; default = photoreal AAA. Keep it to lighting / weather / grade, never geometry
   "occlusion": true             # optional; adds the clause that blockout volumes stay opaque (recommended)
 }
-  color   colour name of the proxy as it appears in the white model: red, orange, yellow, yellow-green, green, cyan, blue, purple, magenta
-  many    true  = every proxy of that colour is one instance of this subject (crowds, enemies, rival karts)
-          false = exactly one proxy of that colour is this subject (the player, the first-person weapon)
+  color   color name of the proxy as it appears in the white model: red, orange, yellow, yellow-green, green, cyan, blue, purple, magenta
+  many    true  = every proxy of that color is one instance of this subject (crowds, enemies, rival karts)
+          false = exactly one proxy of that color is this subject (the player, the first-person weapon)
   motion  how the subject moves on top of the proxy's path; typical values:
           "moving as recorded"  |  "driving exactly along its recorded path"  |  "locked to the viewpoint, swaying gently with each step"
 """

@@ -1,7 +1,7 @@
 """Decode a white-model video into the [F,H,W,3] uint8 frames MiniMax-H3 expects as a video reference.
 
 Adapted from musubi-tuner's `minimax_h3_cache_latents.PyAVH3MediaDecoder.decode_reference_visual` so that the
-dataset / caching machinery is not needed at inference. Behaviour is identical: resample to 24 fps, keep at most
+dataset / caching machinery is not needed at inference. Behavior is identical: resample to 24 fps, keep at most
 `frame_count` frames snapped down to 17n+5, resize to the model canvas (short edge 768, multiples of 32, <= 768x1344).
 """
 from bisect import bisect_left
