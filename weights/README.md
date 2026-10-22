@@ -1,10 +1,10 @@
 # weights/
 
-Expected layout (run `../download_weights.sh` for the base weights; the LoRA is distributed separately, not in git):
+Expected layout (run `../download_weights.sh`; nothing here is tracked in git):
 
 ```
 weights/
-  anygamerenderer_lora.safetensors        2.4 GB  AnyGameRenderer LoRA (distributed separately, not in git)
+  anygamerenderer_lora.safetensors        2.4 GB  AnyGameRenderer LoRA, from https://huggingface.co/AlayaLab/AnyGameRenderer
   diffusion_models/minimax_h3_ref2va_bf16.safetensors      66 GB  MiniMax-H3 Ref2VA transformer, BF16
   text_encoders/qwen3vl_32b_minimax_h3_bf16.safetensors    52 GB  Qwen3-VL-32B text encoder as released with H3
   vae/minimax_h3_video_vae_fp16.safetensors                5.2 GB
