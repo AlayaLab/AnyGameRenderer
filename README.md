@@ -1,4 +1,4 @@
-# AnyGameRenderer: One Generative Renderer from Blockout to AAA for Any Vibe-Coded Games
+# AnyGameRenderer: Entity-Consistent Generative Rendering Across Games and an Entity-Level Benchmark
 
 <p align="center">
   <a href="https://mickeyllg.github.io/AnyGameRenderer"><img src="https://img.shields.io/badge/%F0%9F%8C%90-Project_Page-2d6cdf" alt="Project Page"></a>&nbsp;
@@ -95,7 +95,7 @@ Options: `--steps 20` `--seed 42` `--blocks_to_swap 40` `--lora ''` (base model)
 
 ```bibtex
 @misc{anygamerenderer2026,
-  title  = {AnyGameRenderer: One Generative Renderer from Blockout to AAA for Any Vibe-Coded Games},
+  title  = {AnyGameRenderer: Entity-Consistent Generative Rendering Across Games and an Entity-Level Benchmark},
   author = {TODO},
   year   = {2026},
   note   = {TODO: paper / project page}
