@@ -53,7 +53,7 @@ Options: `--steps 20` `--seed 42` `--blocks_to_swap 40` `--lora ''` (base model)
 
 **Crude recording** — an mp4 at 24 fps, 2–15 s (1344×768 recommended; length is snapped down to `17n+5` frames) of pale-gray geometry with one flat, saturated proxy colour per character / weapon / vehicle class (red, orange, yellow, yellow-green, green, cyan, blue, purple, magenta), and no HUD, text or effects.
 
-**Caption** — write a short `spec.json` and `make_caption.py` expands it into the six-section layout the model was trained on (`--template` prints a full example):
+**Caption** — write a short `spec.json` and `make_caption.py` expands it into the six-section layout the model was trained on (`--template` prints a full example); the easiest way is to give [`skills/anygamerenderer-caption/SKILL.md`](skills/anygamerenderer-caption/SKILL.md) to your coding agent (e.g. copy the folder into `.claude/skills/`) and ask it to write the spec for your clip — it inspects the proxy colours, picks the right fields and knows 45 ready-made art styles:
 
 ```json
 {
@@ -69,7 +69,7 @@ Options: `--steps 20` `--seed 42` `--blocks_to_swap 40` `--lora ''` (base model)
 }
 ```
 
-Describe what each proxy is and the setting concretely, set `"many": true` for classes with several proxies, put the art direction in the optional `"style"`, and write only positive statements (there is no negative guidance — "no HUD" tends to produce a HUD).
+Describe what each proxy is and the setting concretely, set `"many": true` for classes with several proxies, put the art direction in the optional `"style"` (and the character re-imagining at the end of each `desc`), and write only positive statements (there is no negative guidance — "no HUD" tends to produce a HUD).
 
 ## Requirements
 
