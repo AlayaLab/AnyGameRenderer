@@ -1,42 +1,61 @@
-# AnyGameRenderer: Rendering Game Videos from White-Model Blockouts
+# AnyGameRenderer: A Video-to-Video Generative Renderer for Games
 
-Turn a **white-model video** — the untextured grey blockout of a game scene with flat-coloured proxy shapes for
-characters, weapons and vehicles — plus a **caption** into a finished game video. The camera, the layout and every
-proxy's position and timing are kept; what things look like comes from the caption.
+Coding agents can now turn a one-paragraph prompt into a playable game in minutes — game logic, physics, camera, win
+conditions, working HUD. What they cannot produce is good art: the output is gray boxes, colored cylinders and cones on
+flat-shaded ground, the "programmer art" that human studios spend months replacing with modeling, texturing and lighting.
+
+**AnyGameRenderer** is the rendering layer for that gap. It takes a **crude gameplay recording** and a **text prompt**,
+and outputs the same gameplay re-rendered in the prompted style, frame-aligned with the input. It adds characters,
+motion detail and effects, while keeping the layout, the camera, and every entity's position and timing. One
+checkpoint, no per-object labels, no engine hooks: anything that can be screen-recorded can be rendered.
 
 Built as a LoRA on [MiniMax-H3](https://huggingface.co/MiniMaxAI/MiniMax-H3) Ref2VA (reference-video-to-video+audio,
-1344×768, 24 fps). This repository is the inference package: `infer.py`, the caption builder, three example clips and
-a self-contained copy of the model code.
+1344×768, 24 fps). This repository is the inference package: `infer.py`, the caption builder, example clips and a
+self-contained copy of the model code.
 
 ## Highlights
 
-- 🧱 **Blockout in, game out.** Boxes, wireframe boxes, cylinders or ellipsoids sliding over grey geometry become
-  characters, weapons and vehicles in a fully rendered scene — one video reference, no depth, masks or skeletons needed.
-- 🎯 **Entity-level sync.** Every proxy becomes exactly one subject that appears, moves and disappears when the proxy
-  does; the camera path and scene layout are followed frame by frame.
-- 🎨 **Any look from the caption.** Photoreal AAA, LEGO, Ghibli, watercolor, crayon, synthwave, samurai, candy
-  land … the same white model renders in any art direction, and the characters are re-imagined to match.
-- 🎮 **Any genre.** Trained and tested on first-person shooters, top-down survival, third-person action, crowds,
-  vehicle racing and ball sports; held-out games render without per-game tuning.
-- 📦 **Self-contained.** A 2.4 GB LoRA on the public MiniMax-H3 weights; the model code ships inside the repo
-  (25 files), so nothing else has to be installed from source.
+- 🎮 **Generalizes across genres.** Prior and concurrent renderers are demonstrated mainly on third-person, first-person
+  or driving footage. AnyGameRenderer covers the genres agents actually produce — tower defense, auto-battlers, top-down
+  survivors, turn-based battles, kart racing, crowd runners, arena survival, co-op games and shooters — with a single
+  checkpoint and no per-game tuning.
+- 🎯 **Keeps entity correspondence.** The hard part of game rendering is bookkeeping: twelve enemies become nine when
+  three die, a reinforcement wave walks in at t = 4.2 s, a tiny far-away mob must not dissolve into fog. Group counts
+  stay correct, entities appear and disappear on the right frame, and fewer small entities are lost — where the
+  zero-shot base leaves blocks unrendered, drops entities or hallucinates characters that are not in the input.
+- 📹 **Its input is plain video.** No per-object class labels, state-augmented 3D boxes or engine proxies. It accepts
+  whatever a crude game looks like — gray blockouts, colored primitives (boxes, wireframes, cylinders, ellipsoids),
+  semantic-colored maps and coarse clay mockups — at different granularities, with one checkpoint.
+- 🎨 **Any prompted style.** The same recording renders as photoreal AAA, LEGO, Ghibli, crayon, synthwave, samurai,
+  candy land … and the characters are re-imagined to match, while staying frame-aligned with the input.
+- 📊 **Measured at the entity level.** On a held-out benchmark of 59 cases / 753 ground-truth-boxed entities, four
+  metrics score whether each entity appears on time, stays in place, and is neither unrendered nor hallucinated.
+  Over the zero-shot base: temporal match 50.9 → 62.9 %, position match 57.1 → 61.9 %, unrendered rate 4.1 → 2.9 %,
+  hallucination rate 52.1 → 46.0 %.
 
 ## Gallery
 
-White model (left) · AnyGameRenderer (right). All clips are 5.2 s at 1344×768; the GIFs are downscaled.
+Crude input on the **left** (top-left in the style grids) · AnyGameRenderer on the **right**, playing in sync.
+All clips are 5.2 s at 1344×768; the GIFs are downscaled. One renderer, every genre, input form and art style below.
 
 | | |
 |:--:|:--:|
-| ![](assets/gallery/academy-firefight_photoreal.gif) | ![](assets/gallery/harbor-breakout_photoreal.gif) |
-| Academy Firefight · photoreal AAA | Harbor Breakout · photoreal AAA, 200+ soldiers |
-| ![](assets/gallery/block-o-mon_lego.gif) | ![](assets/gallery/city-roam_lego.gif) |
-| Block-o-mon · LEGO | City Roam · LEGO |
-| ![](assets/gallery/trenchfire_crayon.gif) | ![](assets/gallery/trenchfire_samurai.gif) |
-| Trenchfire · child's crayon drawing | Trenchfire · Ghost of Tsushima samurai |
-| ![](assets/gallery/academy-firefight_ghibli.gif) | ![](assets/gallery/egg-heist_candyland.gif) |
-| Academy Firefight · Studio Ghibli | The Great Egg Heist · candy land |
-| ![](assets/gallery/turbo-kart_synthwave.gif) | ![](assets/gallery/co-workers_bioshock.gif) |
-| Turbo Kart Grand Prix · synthwave | Kill Your Co-Workers · BioShock Art Deco |
+| ![](assets/gallery/genre_trenchfire.gif) | ![](assets/gallery/genre_cityroam.gif) |
+| WW1 shooter · first person | Open-city driving · third person |
+| ![](assets/gallery/genre_turbokart.gif) | ![](assets/gallery/genre_elitestriker.gif) |
+| Kart racing · chase cam | Soccer broadcast · TV cam |
+| ![](assets/gallery/genre_spinarena.gif) | ![](assets/gallery/genre_aliensurv.gif) |
+| Spinning-top battle · arena | Survivors-like · top down |
+| ![](assets/gallery/genre_wheelfactor.gif) | ![](assets/gallery/genre_fallenangels.gif) |
+| Vehicle combat · mud arena | Dark fantasy · top down |
+| ![](assets/gallery/genre_yavball.gif) | ![](assets/gallery/input_wireframe.gif) |
+| Fantasy ball sport · arena | Wireframe-box input |
+| ![](assets/gallery/input_coarse.gif) | ![](assets/gallery/input_semantic.gif) |
+| Coarse 3D mockup input | 2D semantic map input |
+| ![](assets/gallery/input_ellipsoids.gif) | |
+| Ellipsoid input | |
+| ![](assets/gallery/styles_blockomon.gif) | ![](assets/gallery/styles_turbokart.gif) |
+| One blockout, three styles · steampunk / ukiyo-e / felt &amp; knit | One blockout, three styles · synthwave / nuclear wasteland / pirate seas |
 
 ## Quick Start
 
@@ -54,8 +73,8 @@ bash run_example.sh                       # renders examples/*/primitive.mp4 -> 
 Accept the [MiniMax-H3 Community License](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE) before
 downloading the base weights; `weights/README.md` lists the expected files.
 
-Each `examples/<game>/` holds `primitive.mp4` (the white model), `spec.json`, the `caption.txt` built from it,
-`ground_truth.mp4` (the real game footage the white model was captured from — never used by the model) and, for two
+Each `examples/<game>/` holds `primitive.mp4` (the crude recording — colored primitives over a gray blockout), `spec.json`, the `caption.txt` built from it,
+`ground_truth.mp4` (the real game footage the crude recording was captured from — never used by the model) and, for two
 of them, `rendered_v10ep3.mp4`, the output of this package with the default settings (seed 42).
 
 **Your own clip** is three steps:
@@ -73,7 +92,7 @@ soundscape line.
 
 ## Inputs and captions
 
-**White-model video** — mp4, 24 fps, 2–15 s; 1344×768 recommended (other 16:9 sizes are resized to the 768-short-edge
+**Crude recording (the input video)** — mp4, 24 fps, 2–15 s; 1344×768 recommended (other 16:9 sizes are resized to the 768-short-edge
 canvas). The generated length is the clip length snapped down to `17n+5` frames (124 = 5.17 s, 345 = 15 s max).
 
 - Environment: untextured **pale grey** geometry, no textures or lighting cues beyond simple shading.
@@ -101,7 +120,7 @@ on (`python make_caption.py --template` prints a full example; the docstring doc
 
 What matters for sync: describe *what each proxy is* and *the setting* concretely; set `"many": true` for any class
 with several proxies (crowds, enemies, rival cars); use the optional `"style"` for the art direction (lighting, medium,
-era — the gallery looks were produced this way) but never describe geometry that is not in the white model; write
+era — the gallery looks were produced this way) but never describe geometry that is not in the input recording; write
 positive statements only — the model has no negative guidance, so "no HUD" tends to produce a HUD.
 
 ## Requirements
