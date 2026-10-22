@@ -15,7 +15,7 @@ AnyGameRenderer takes a crude gameplay recording (the "programmer art" agents pr
 
 - 🎮 **Generalizes across genres:** one checkpoint renders tower defense, auto-battlers, top-down survivors, turn-based battles, kart racing, crowd runners, arena survival, co-op games, and shooters.
 - 🎯 **Keeps entity correspondence:** group counts stay correct, entities appear and disappear on the right frame, and small far-away entities are not lost.
-- 📹 **Its input is plain video:** gray blockouts, colored primitives, semantic maps, wireframes and coarse mockups all work, with no per-object labels or engine hooks.
+- 📹 **Its input is plain video:** gray blockouts, colored primitives, semantic maps, wireframes, and coarse mockups all work, with no per-object labels or engine hooks.
 - 🎨 **Any prompted style:** photoreal AAA, LEGO, Ghibli, crayon, synthwave, samurai, candy land … with the characters re-imagined to match.
 - 📊 **Measured at the entity level:** on 59 held-out cases with 753 ground-truth entities, temporal match rises from 50.9 % to 62.9 % and position match from 57.1 % to 61.9 % over the zero-shot base, while the unrendered (4.1 → 2.9 %) and hallucination (52.1 → 46.0 %) rates fall.
 
