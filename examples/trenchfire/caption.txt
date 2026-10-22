@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is the player's own weapon seen in first person: a long wooden bolt-action field rifle with a fixed bayonet, a dark bolt and a leather sling, held in bare hands at the lower right of the frame; represented in <Video 1> by the blue box.
+<Subject 2> is an infantryman crossing no man's land: an enemy soldier in a gray-brown wool uniform and steel helmet rushing across the open ground with a rifle, or the one allied soldier in khaki advancing beside the player; every blue box in <Video 1> is one such subject, and the whole blue group is a group of identical ones.
+<Video 1> is the source video for the target video edit. It is an untextured blockout capture of this exact take: pale grey primitive geometry for the whole environment and plain coloured boxs, one per character or vehicle, sliding along their exact paths, rendered with the exact camera motion of the take.
+
+summary:
+[video editing] The target video is an edited version of <Video 1>. The flat blockout visuals are replaced with a polished, photoreal AAA game render. The target setting is a First World War no man's land: churned gray-brown mud and craters, sandbag revetments, coils of barbed wire, shattered dead trees, a ruined farm, orchard stumps and tattered signal flags on poles, under a heavy overcast sky with soft diffuse light.
+
+retention_analysis:
+<Subject 1>: partially_preserved - its position, apparent size, heading and recorded movement from <Video 1> are preserved exactly, while the flat blue box is replaced by the subject locked to the viewpoint, swaying gently with each step.
+<Subject 2>: partially_preserved - the position, apparent size, count, heading and recorded movement of every blue box from <Video 1> are preserved exactly, while each flat blue box is replaced by one subject moving as recorded.
+<Video 1> (source video editing): partially_preserved - its camera trajectory, scene layout, object placement and temporal structure are preserved exactly; every grey blockout surface is re-rendered in place as the corresponding real-world surface with the same silhouette, scale and position, and every coloured box reads as its finished subject in every frame, at the same position, size and heading, appearing exactly when its box appears and vanishing exactly when its box vanishes; areas empty in <Video 1> stay empty, and no character, vehicle or creature is added that has no box in <Video 1>. Every grey blockout volume of <Video 1>, including any that passes close to or in front of the camera, is rendered as solid opaque geometry of the setting at exactly the same place and size, occluding whatever lies behind it exactly as it does in <Video 1>; nothing is seen through blockout geometry, and no surface that is hidden in <Video 1> becomes visible.
+
+detailed_description:
+The target video is in a polished, photoreal AAA game visual style: physically based materials, crisp micro-detail, soft global illumination, filmic colour grading, subtle depth of field and motion blur. Consistency with <Video 1> takes priority over everything else: geometry, camera and characters follow <Video 1> frame by frame. Every grey blockout volume of <Video 1>, including any that passes close to or in front of the camera, is rendered as solid opaque geometry of the setting at exactly the same place and size, occluding whatever lies behind it exactly as it does in <Video 1>; nothing is seen through blockout geometry, and no surface that is hidden in <Video 1> becomes visible.
+[Shot 1] The shot follows <Video 1> as one continuous view; the camera repeats the recorded motion exactly. Every grey blockout block of <Video 1> becomes the matching structure of the setting in the same place, with the same silhouette and scale, and the grey ground becomes the setting's ground. The blue box becomes <Subject 1>, exactly along its recorded path and timing. Each blue box becomes one <Subject 2>, exactly along its recorded path and timing, no more and no fewer than the boxs present in each frame. Nothing moves that does not move in <Video 1>.
+
+overall_soundscape:
+rifle cracks and distant artillery, boots in mud, wind over the craters
+
+non_diegetic_music:
+N/A

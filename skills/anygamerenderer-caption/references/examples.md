@@ -1,6 +1,6 @@
 # Example specs
 
-Each block is a complete `spec.json`. All were rendered with the shipped model; the first three ship as `examples/`.
+Each block is a complete `spec.json` that was rendered with the shipped model. The repo's `examples/` folder holds three more (a WW1 shooter whose proxies all share one color, a third-person heist, and city driving) together with their rendered outputs.
 
 ## First-person shooter (weapon proxy + enemy group)
 

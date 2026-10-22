@@ -1,0 +1,19 @@
+{
+  "shape": "cylinder",
+  "setting": "a tidy city district on a cloudy afternoon: a dark asphalt ring road with yellow double center lines and white zebra crossings, broad pale-stone pavements, a central park with bright green lawn, round trimmed bushes, leafy trees and a fountain, and four- to five-story cream, tan and gray apartment blocks with rows of dark teal windows, with dark green street lamps, traffic lights, benches and shop signs along the curbs under a pale blue sky with soft gray clouds",
+  "subjects": [
+    {
+      "color": "orange",
+      "desc": "a city car on the ring road: the one the camera follows is the player's boxy cream sedan with a flat roof and dark windows showing the driver, the others are compact hatchbacks, a white utility van, a service bus and a delivery lorry in dull reds, grays and blues driving their own lanes or parked at the curb",
+      "many": true,
+      "motion": "driving exactly along its recorded path"
+    },
+    {
+      "color": "blue",
+      "desc": "a resident in a casual jacket walking or standing on the park paths",
+      "many": true,
+      "motion": "moving as recorded"
+    }
+  ],
+  "sound": "light traffic hum, tires on asphalt, birds in the park"
+}
