@@ -1,8 +1,0 @@
-{
-  "shape": "box",
-  "setting": "a sunlit asphalt race circuit: smooth dark tarmac with white edge lines and red-white kerbs, tyre barriers, grandstands and advertising boards, green verges and distant hills under a clear sky",
-  "subjects": [
-    {"color": "orange", "desc": "a sleek open-wheel racing kart with a low body, exposed engine and a helmeted driver; the one the camera follows is the player's kart, the others are rival karts in different liveries", "many": true, "motion": "driving exactly along its recorded path"}
-  ],
-  "sound": "screaming kart engines, tyres squealing on asphalt, crowd noise"
-}

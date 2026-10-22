@@ -43,7 +43,7 @@ bash download_weights.sh                                         # base weights 
 bash run_example.sh                                              # examples/*/primitive.mp4 -> examples/out/*.mp4 (~17 min per clip)
 ```
 
-Accept the [MiniMax-H3 Community License](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE) before downloading; each `examples/<game>/` holds the crude recording, its `spec.json` / `caption.txt`, the original game footage and (for two) the rendered output.
+Accept the [MiniMax-H3 Community License](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE) before downloading; each `examples/<game>/` (a WW1 shooter, a third-person heist, and city driving) holds the crude recording, its `spec.json` / `caption.txt`, the original game footage, and the rendered output.
 
 **Your own clip** is three commands:
 

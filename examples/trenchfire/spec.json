@@ -1,0 +1,19 @@
+{
+  "shape": "box",
+  "setting": "a First World War no man's land: churned gray-brown mud and craters, sandbag revetments, coils of barbed wire, shattered dead trees, a ruined farm, orchard stumps and tattered signal flags on poles, under a heavy overcast sky with soft diffuse light",
+  "subjects": [
+    {
+      "color": "blue",
+      "desc": "the player's own weapon seen in first person: a long wooden bolt-action field rifle with a fixed bayonet, a dark bolt and a leather sling, held in bare hands at the lower right of the frame",
+      "many": false,
+      "motion": "locked to the viewpoint, swaying gently with each step"
+    },
+    {
+      "color": "blue",
+      "desc": "an infantryman crossing no man's land: an enemy soldier in a gray-brown wool uniform and steel helmet rushing across the open ground with a rifle, or the one allied soldier in khaki advancing beside the player",
+      "many": true,
+      "motion": "moving as recorded"
+    }
+  ],
+  "sound": "rifle cracks and distant artillery, boots in mud, wind over the craters"
+}

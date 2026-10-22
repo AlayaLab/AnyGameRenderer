@@ -1,0 +1,19 @@
+{
+  "shape": "wire",
+  "setting": "a pastel tropical island: pale sand, mint-green grass tufts, salmon-pink palm trunks with mint fronds, dark gray boulders, stone nest pedestals holding pale eggs, shallow turquoise water and a white-blue sky under soft light",
+  "subjects": [
+    {
+      "color": "red",
+      "desc": "the protagonist: a petite thief with short pink hair, a white blouse, dark shorts and white sneakers, seen from behind",
+      "many": false,
+      "motion": "moving as recorded"
+    },
+    {
+      "color": "blue",
+      "desc": "a patrolling guard in a dark uniform and cap, walking a set route around the egg nests",
+      "many": true,
+      "motion": "moving as recorded"
+    }
+  ],
+  "sound": "gentle surf, gulls, footsteps on sand"
+}
