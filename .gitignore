@@ -1,0 +1,6 @@
+# model weights are not tracked in git (LoRA + base weights); see weights/README.md / download_weights.sh
+weights/*
+!weights/README.md
+examples/out/
+__pycache__/
+*.pyc

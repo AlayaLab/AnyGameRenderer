@@ -1,0 +1,3 @@
+{"name": "academy-firefight", "primitive": "academy-firefight/primitive.mp4", "caption_file": "academy-firefight/caption.txt", "out": "out/academy-firefight.mp4"}
+{"name": "harbor-breakout", "primitive": "harbor-breakout/primitive.mp4", "caption_file": "harbor-breakout/caption.txt", "out": "out/harbor-breakout.mp4"}
+{"name": "turbo-kart", "primitive": "turbo-kart/primitive.mp4", "caption_file": "turbo-kart/caption.txt", "out": "out/turbo-kart.mp4"}

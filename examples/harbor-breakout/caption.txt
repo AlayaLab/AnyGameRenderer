@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is a blue-uniformed soldier with a dark helmet and rifle, jogging in tight formation with identical squadmates; every cyan wireframe box in <Video 1> is one such subject, and the whole cyan group is a group of identical ones.
+<Subject 2> is a red-uniformed enemy infantryman with a dark helmet and rifle, standing or charging in ranks; every blue wireframe box in <Video 1> is one such subject, and the whole blue group is a group of identical ones.
+<Video 1> is the source video for the target video edit. It is an untextured blockout capture of this exact take: pale grey primitive geometry for the whole environment and plain coloured wireframe boxs, one per character or vehicle, sliding along their exact paths, rendered with the exact camera motion of the take.
+
+summary:
+[video editing] The target video is an edited version of <Video 1>. The flat blockout visuals are replaced with a polished, photoreal AAA game render. The target setting is a container port seen from high above: a long pale-grey concrete dock road with white lane arrows and pedestrian stripes, lined on both sides by stacked shipping containers in teal, yellow and grey, under a hazy white sky.
+
+retention_analysis:
+<Subject 1>: partially_preserved - the position, apparent size, count, heading and recorded movement of every cyan wireframe box from <Video 1> are preserved exactly, while each flat cyan wireframe box is replaced by one subject moving as recorded.
+<Subject 2>: partially_preserved - the position, apparent size, count, heading and recorded movement of every blue wireframe box from <Video 1> are preserved exactly, while each flat blue wireframe box is replaced by one subject moving as recorded.
+<Video 1> (source video editing): partially_preserved - its camera trajectory, scene layout, object placement and temporal structure are preserved exactly; every grey blockout surface is re-rendered in place as the corresponding real-world surface with the same silhouette, scale and position, and every coloured wireframe box reads as its finished subject in every frame, at the same position, size and heading, appearing exactly when its wireframe box appears and vanishing exactly when its wireframe box vanishes; areas empty in <Video 1> stay empty, and no character, vehicle or creature is added that has no wireframe box in <Video 1>. Every grey blockout volume of <Video 1>, including any that passes close to or in front of the camera, is rendered as solid opaque geometry of the setting at exactly the same place and size, occluding whatever lies behind it exactly as it does in <Video 1>; nothing is seen through blockout geometry, and no surface that is hidden in <Video 1> becomes visible.
+
+detailed_description:
+The target video is in a polished, photoreal AAA game visual style: physically based materials, crisp micro-detail, soft global illumination, filmic colour grading, subtle depth of field and motion blur. Consistency with <Video 1> takes priority over everything else: geometry, camera and characters follow <Video 1> frame by frame. Every grey blockout volume of <Video 1>, including any that passes close to or in front of the camera, is rendered as solid opaque geometry of the setting at exactly the same place and size, occluding whatever lies behind it exactly as it does in <Video 1>; nothing is seen through blockout geometry, and no surface that is hidden in <Video 1> becomes visible.
+[Shot 1] The shot follows <Video 1> as one continuous view; the camera repeats the recorded motion exactly. Every grey blockout block of <Video 1> becomes the matching structure of the setting in the same place, with the same silhouette and scale, and the grey ground becomes the setting's ground. Each cyan wireframe box becomes one <Subject 1>, exactly along its recorded path and timing, no more and no fewer than the wireframe boxs present in each frame. Each blue wireframe box becomes one <Subject 2>, exactly along its recorded path and timing, no more and no fewer than the wireframe boxs present in each frame. Nothing moves that does not move in <Video 1>.
+
+overall_soundscape:
+hundreds of boots on concrete, shouted orders, distant harbour cranes
+
+non_diegetic_music:
+N/A

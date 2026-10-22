@@ -1,0 +1,9 @@
+{
+  "shape": "cylinder",
+  "setting": "a futuristic indoor training arena: smooth white and pale-grey curved walls, dark teal panels, red floor stripes and hazard markings, raised platforms and elevated walkways with railings under a vaulted dark ceiling, lit by cool white light with teal and pink neon accents",
+  "subjects": [
+    {"color": "green", "desc": "the player's own weapon seen in first person: a futuristic blue-and-magenta assault rifle with white accents and a glowing emitter, held in brown-gloved hands at the lower right of the frame", "many": false, "motion": "locked to the viewpoint, swaying gently with each step"},
+    {"color": "blue", "desc": "a rival cadet in a dark-grey combat suit with red trim and a visored helmet, carrying a rifle", "many": true, "motion": "moving as recorded"}
+  ],
+  "sound": "hum of arena ventilation, footsteps on hard flooring, electronic rifle fire echoing"
+}

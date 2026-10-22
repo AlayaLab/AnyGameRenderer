@@ -1,0 +1,9 @@
+{
+  "shape": "wire",
+  "setting": "a container port seen from high above: a long pale-grey concrete dock road with white lane arrows and pedestrian stripes, lined on both sides by stacked shipping containers in teal, yellow and grey, under a hazy white sky",
+  "subjects": [
+    {"color": "cyan", "desc": "a blue-uniformed soldier with a dark helmet and rifle, jogging in tight formation with identical squadmates", "many": true, "motion": "moving as recorded"},
+    {"color": "blue", "desc": "a red-uniformed enemy infantryman with a dark helmet and rifle, standing or charging in ranks", "many": true, "motion": "moving as recorded"}
+  ],
+  "sound": "hundreds of boots on concrete, shouted orders, distant harbour cranes"
+}
