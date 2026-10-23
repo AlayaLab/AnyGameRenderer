@@ -2,12 +2,12 @@
 
 <p align="center">
   <a href="https://alaya-lab.github.io/AnyGameRenderer/"><img src="https://img.shields.io/badge/%F0%9F%8C%90-Project_Page-2d6cdf" alt="Project Page"></a>&nbsp;
-  <a href="https://github.com/AlayaLab/AnyGameRenderer/blob/main/assets/report.pdf"><img src="https://img.shields.io/badge/arXiv-Report-b31b1b?logo=arxiv&logoColor=white" alt="Technical Report"></a>&nbsp;
+  <a href="https://arxiv.org/pdf/2610.31466"><img src="https://img.shields.io/badge/arXiv-Report-b31b1b?logo=arxiv&logoColor=white" alt="Technical Report"></a>&nbsp;
   <a href="https://huggingface.co/AlayaLab/AnyGameRenderer"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Model-ffcc00" alt="Model"></a>&nbsp;
   <a href="https://huggingface.co/datasets/AlayaLab/AnyGameRenderer-data"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Dataset-ff9d00" alt="Dataset"></a>
 </p>
 
-<!-- TODO before release: swap the report badge to the arXiv link once it is live, and fill in the HF dataset repo. -->
+<!-- TODO before release: fill in the HF dataset repo in the badges above. -->
 
 AnyGameRenderer takes a crude gameplay recording (the "programmer art" agents produce) and a text prompt, and outputs the same gameplay re-rendered in the prompted style, frame-aligned with the input.
 
@@ -98,6 +98,6 @@ Options: `--steps 20` `--seed 42` `--blocks_to_swap 40` `--lora ''` (base model)
   title  = {AnyGameRenderer: Entity-Consistent Generative Rendering Across Games and an Entity-Level Benchmark},
   author = {TODO},
   year   = {2026},
-  note   = {TODO: paper / project page}
+  note   = {arXiv:2610.31466, https://alaya-lab.github.io/AnyGameRenderer/}
 }
 ```
