@@ -94,10 +94,10 @@ Options: `--steps 20` `--seed 42` `--blocks_to_swap 40` `--lora ''` (base model)
 ## Citation
 
 ```bibtex
-@misc{anygamerenderer2026,
-  title  = {AnyGameRenderer: Entity-Consistent Generative Rendering Across Games and an Entity-Level Benchmark},
-  author = {TODO},
-  year   = {2026},
-  note   = {arXiv:2610.31466, https://alaya-lab.github.io/AnyGameRenderer/}
+@article{liu2026anygamerenderer,
+  title={AnyGameRenderer: Entity-Consistent Generative Rendering Across Games and an Entity-Level Benchmark},
+  author={Liu, Ruicong and Ouyang, Liangyang and Lan, Fengbo and Wang, Zhixiang and Zhang, Kaipeng},
+  journal={arXiv preprint arXiv:2610.31466},
+  year={2026}
 }
 ```
