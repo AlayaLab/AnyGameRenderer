@@ -19,5 +19,5 @@ Processor: https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct.
 
 `anygamerenderer_lora.safetensors` — rank 128, alpha 128, on `attn.qkv_proj, attn.out_proj, mlp.fc1, mlp.fc2`
 of every transformer block (musubi-tuner `networks.lora_minimax_h3` format, 600 tensors). Trained on the Ref2VA base
-model with the standard flow-matching loss on the paired blockout/game dataset described in the report (1344x768, 124 frames).
+model with the standard flow-matching loss on the paired crude/finished recordings of agent-made games and engine scenes described in the report (1344x768, 124 frames).
 `infer.py` merges it into the BF16 transformer at load time (`--lora_multiplier 1.0`).
